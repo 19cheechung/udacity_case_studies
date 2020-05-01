@@ -1,4 +1,5 @@
 from __future__ import print_function
+from sklearn.gaussian_process import GaussianProcessClassifier
 
 import argparse
 import os
@@ -40,6 +41,7 @@ if __name__ == '__main__':
     
     ## TODO: Add any additional arguments that you will need to pass into your model
     
+    
     # args holds all passed-in arguments
     args = parser.parse_args()
 
@@ -53,15 +55,14 @@ if __name__ == '__main__':
     
     
     ## --- Your code here --- ##
-    
+ 
 
     ## TODO: Define a model 
-    model = None
-    
+    model = GaussianProcessClassifier()
     
     ## TODO: Train the model
     
-    
+    model.fit(train_x,train_y)
     
     ## --- End of your code  --- ##
     
